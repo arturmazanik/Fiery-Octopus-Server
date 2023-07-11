@@ -1,6 +1,6 @@
 Fiery Octopus Server
 =
-Fast Server environment for starting php8 applications with `PHP8`, `nginx`, `mysql`+`phpmyadmin`
+Fast Server environment for starting php applications with `PHP8`, `nginx`, `mysql`+`phpmyadmin`
 
 For run use `docker compose up -d`
 
