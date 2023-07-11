@@ -5,7 +5,7 @@ Fast Server environment for starting php8 applications with `PHP8`, `nginx`, `my
 For run use `docker compose up -d`
 
 ## Containers
-1. site: `localhost:80`
+1. site: `localhost:8080`
 2. mysql: `localhost:3306`
 3. phpmyadmin: `localhost:8081`
 
