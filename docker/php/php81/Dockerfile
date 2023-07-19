@@ -2,6 +2,8 @@ FROM php:8.1.11-fpm
 
 MAINTAINER Artur 0ctopus Mazanik <mazanik.artur@ya.ru>
 
+WORKDIR /var/www
+
 RUN apt-get update \
   && apt-get install -y \
              apt-utils \
@@ -47,4 +49,16 @@ RUN docker-php-ext-configure intl --enable-intl && \
 
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-WORKDIR /var/www/html
+# Create user and group www for Laravel app
+RUN groupadd -g 1000 www
+RUN useradd -u 1000 -ms /bin/bash -g www www
+
+#
+COPY . /var/www
+COPY --chown=www:www . /var/www
+
+# Change user to www
+USER www
+
+EXPOSE 9000
+CMD ["php-fpm"]
