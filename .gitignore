@@ -1,3 +1,5 @@
 .idea
 .git
-app/
+
+#sites
+apps/
