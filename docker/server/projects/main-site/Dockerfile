@@ -3,8 +3,8 @@ FROM ubuntu:22.04
 ARG XDEBUG
 ARG XDEBUG_PORT
 
-WORKDIR /var/www/html
-COPY ../../app/index.php var/www/html
+WORKDIR /var/www/main-site
+COPY ../../../apps/main-site/index.php var/www/main-site
 
 RUN apt-get update && \
     apt-get install -y nginx && \

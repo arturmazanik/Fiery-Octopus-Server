@@ -1,4 +1,4 @@
-FROM php:8.1.11-fpm
+FROM php:8.1.12-fpm
 
 MAINTAINER Artur 0ctopus Mazanik <mazanik.artur@ya.ru>
 
