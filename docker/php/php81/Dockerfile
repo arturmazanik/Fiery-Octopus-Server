@@ -53,6 +53,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN groupadd -g 1000 www
 RUN useradd -u 1000 -ms /bin/bash -g www www
 
+RUN mkdir -p /tmp/php_sessions/www/main-site
+RUN chown www:www -R /tmp/php_sessions/www/main-site
+
 #
 COPY . /var/www
 COPY --chown=www:www . /var/www
